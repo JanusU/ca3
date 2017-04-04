@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Mar 29 17:26:50 CEST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-015b-1aad-3348-000006817700 
+on database directory memory:/Users/Yousinho/WebstormProjects/seed/semesterSeedJAX-RS-Backend/myDB with class loader sun.misc.Launcher$AppClassLoader@2a139a55 
+Loaded from file:/Users/Yousinho/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_101-b13
+user.dir=/Users/Yousinho/WebstormProjects/seed/semesterSeedJAX-RS-Backend
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.11.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
