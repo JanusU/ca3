@@ -1,0 +1,13 @@
+
+### NetBeans ###
+Backend/nbproject/private/
+Backend/build/
+Backend/nbbuild/
+Backend/dist/
+Backend/nbdist/
+Backend/.nb-gradle/
+### NetBeans ###
+
+
+
+frontend/node_modules/
