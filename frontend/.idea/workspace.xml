@@ -57,9 +57,17 @@
       <file leaf-file-name="fetchHelpers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stores/fetchHelpers.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+=======
             <state relative-caret-position="105">
               <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
               <folding />
+>>>>>>> 5bb480adb9b871a13d10400c2fd4b4f1bef0d597
             </state>
           </provider>
         </entry>
@@ -384,18 +392,40 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491293200899</updated>
+<<<<<<< HEAD
+      <workItem from="1491293202770" duration="6819000" />
+=======
       <workItem from="1491293202770" duration="5298000" />
+<<<<<<< HEAD
       <workItem from="1491410238406" duration="8216000" />
       <workItem from="1491504571582" duration="4261000" />
       <workItem from="1491591918432" duration="859000" />
+=======
+      <workItem from="1491410238406" duration="6381000" />
+>>>>>>> 5bb480adb9b871a13d10400c2fd4b4f1bef0d597
+>>>>>>> eab2356095df125df3e0ceb6dd866f609979dbf4
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="18634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1680" y="-143" width="1680" height="1050" extended-state="0" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="6819000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+=======
+    <option name="totallyTimeSpent" value="11679000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="734" extended-state="6" />
+>>>>>>> 5bb480adb9b871a13d10400c2fd4b4f1bef0d597
+>>>>>>> eab2356095df125df3e0ceb6dd866f609979dbf4
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -727,14 +757,35 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/stores/fetchHelpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+=======
+    <entry file="file://$PROJECT_DIR$/src/pages/Products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> eab2356095df125df3e0ceb6dd866f609979dbf4
     <entry file="file://$PROJECT_DIR$/src/stores/useStrict.js">
       <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 5bb480adb9b871a13d10400c2fd4b4f1bef0d597
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/stores/BookStore.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/stores/userStore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -744,15 +795,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jsconfig.json">
+>>>>>>> 5bb480adb9b871a13d10400c2fd4b4f1bef0d597
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stores/fetchHelpers.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+=======
         <state relative-caret-position="105">
           <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding />
@@ -771,6 +827,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="52" />
+>>>>>>> 5bb480adb9b871a13d10400c2fd4b4f1bef0d597
           <folding>
             <element signature="e#1#43#0" expanded="true" />
           </folding>
