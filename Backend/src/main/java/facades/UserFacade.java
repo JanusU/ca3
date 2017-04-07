@@ -7,6 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Query;
 import security.IUser;
 import security.PasswordStorage;
 
@@ -17,6 +18,8 @@ public class UserFacade implements IUserFacade {
   public UserFacade(EntityManagerFactory emf) {
     this.emf = emf;   
   }
+
+
 
   private EntityManager getEntityManager() {
     return emf.createEntityManager();
@@ -55,6 +58,27 @@ public class UserFacade implements IUserFacade {
       } 
     
   }
+  
+      public void addUser(User u) {
+    EntityManager em = getEntityManager();
+
+        try {
+            em.getTransaction().begin();
+            em.persist(u);
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
+
+    }
+    
+    
+    public List<User> getALlUsers() {
+        EntityManager em = getEntityManager();
+        Query q = em.createQuery("SELECT u FROM SEED_USER u");
+        List<User> ul = ( List<User>) q.getResultList();
+        return ul;
+    }
    
   
 }
