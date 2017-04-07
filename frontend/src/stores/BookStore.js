@@ -10,10 +10,27 @@ class BookStore {
 
 
     constructor() {
-        this.getData()
-       // console.log(this.messageFromServer);
+       this.getData();
 
-      console.log( this.getBookByID(2));
+       // console.log(this.messageFromServer);
+//get all books: this.getData();
+    //  get book by id : console.log( this.getBookByID(2));
+
+
+        /*  add new book:  var maNewBook = JSON.parse(" {\"title\": \"Book2\", \"info\": \"info .\", \"moreInfo\": \" more infofofof\"} ");
+
+         this.fetchAddNewBook(maNewBook);*/
+
+// delete book:
+        // var deleteMe = JSON.parse(" {\"id\": \"12 \",\"title\": \"Book2\", \"info\": \"info .\", \"moreInfo\": \" more infofofof\"} ");
+//this.fetchDeleteBook(deleteMe)
+
+
+
+        // edit book:
+    //   var deleteMe = JSON.parse(" {\"id\": \"10 \",\"title\": \"Book3\", \"info\": \"info .\", \"moreInfo\": \" more infofofof\"} ");
+    //this.fetchEditBook(deleteMe);
+
     }
 
 
@@ -27,6 +44,7 @@ class BookStore {
     }
     @computed
     get books(){
+
         return this.Books.slice();
 
     }
@@ -61,7 +79,7 @@ class BookStore {
 
     @action
     getData = () => {
-        console.log("hej");
+
 
         this.errorMessage = "";
         this.messageFromServer = "";
@@ -87,7 +105,7 @@ class BookStore {
                     this.setBooks(res);
                     //console.log(this.books);
 
-                    //console.log(res.length);
+                    console.log(res);
                     this.setMessageFromServer(res.message);
                 }
             }).catch(err => {
@@ -102,7 +120,7 @@ class BookStore {
   //setTimeout(this.getData,120000);
 
     }
-
+@action
     fetchBookByID = (id) => {
 
         this.errorMessage = "";
@@ -148,6 +166,122 @@ class BookStore {
        // setTimeout(this.getData,120000);
 
     }
+
+
+@action
+    fetchAddNewBook = (bookJason) => { /*  example:  var maNewBook = JSON.parse(" {\"title\": \"Book2\", \"info\": \"info .\", \"moreInfo\": \" more infofofof\"} ");
+
+ this.fetchAddNewBook(maNewBook);*/
+
+        this.errorMessage = "";
+        this.messageFromServer = "";
+        let errorCode = 200;
+        const options = fetchHelper.makeOptions("POST", false,bookJason);
+
+
+     fetch(URL + "api/books/add", options)
+            .then((res) => {
+                if (res.status > 200 || !res.ok) {
+                    errorCode = res.status;
+                    console.log("error");
+                }
+                return res.json();
+            })
+            .then((res) => {
+                console.log("l 171");
+                if (errorCode !== 200) {
+                    throw new Error(`${res.error.message} (${res.error.code})`);
+                }
+                else {
+
+                    console.log(res);
+                this.setMessageFromServer(res.message);
+                }
+            }).catch(err => {
+                //This is the only way (I have found) to veryfy server is not running
+                this.setErrorMessage(fetchHelper.addJustErrorMessage(err));
+                console.log("exception");
+                console.log( this.errorMessage );
+                console.log(URL);
+            })
+
+    }
+
+
+    @action
+    fetchDeleteBook = (bookJason) => {
+
+        this.errorMessage = "";
+        this.messageFromServer = "";
+        let errorCode = 200;
+        const options = fetchHelper.makeOptions("DELETE", false,bookJason);
+
+
+        fetch(URL + "api/books/delete", options)
+            .then((res) => {
+                if (res.status > 200 || !res.ok) {
+                    errorCode = res.status;
+                    console.log("error");
+                }
+                return res.json();
+            })
+            .then((res) => {
+                console.log("l 171");
+                if (errorCode !== 200) {
+                    throw new Error(`${res.error.message} (${res.error.code})`);
+                }
+                else {
+
+                    console.log(res);
+                    this.setMessageFromServer(res.message);
+                }
+            }).catch(err => {
+            //This is the only way (I have found) to veryfy server is not running
+            this.setErrorMessage(fetchHelper.addJustErrorMessage(err));
+            console.log("exception");
+            console.log( this.errorMessage );
+            console.log(URL);
+        })
+
+    }
+
+    @action
+    fetchEditBook = (bookJason) => {
+
+        this.errorMessage = "";
+        this.messageFromServer = "";
+        let errorCode = 200;
+        const options = fetchHelper.makeOptions("PUT", false,bookJason);
+
+
+        fetch(URL + "api/books/update", options)
+            .then((res) => {
+                if (res.status > 200 || !res.ok) {
+                    errorCode = res.status;
+                    console.log("error");
+                }
+                return res.json();
+            })
+            .then((res) => {
+                console.log("l 171");
+                if (errorCode !== 200) {
+                    throw new Error(`${res.error.message} (${res.error.code})`);
+                }
+                else {
+
+                    console.log(res);
+                    this.setMessageFromServer(res.message);
+                }
+            }).catch(err => {
+            //This is the only way (I have found) to veryfy server is not running
+            this.setErrorMessage(fetchHelper.addJustErrorMessage(err));
+            console.log("exception");
+            console.log( this.errorMessage );
+            console.log(URL);
+        })
+
+    }
+
 
 }
 export default new BookStore();
