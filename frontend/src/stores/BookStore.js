@@ -6,25 +6,14 @@ class BookStore {
     @observable errorMessage = "";
 
     @observable Books = [];
+    @observable BookByID = {};
+
 
     constructor() {
-        this.Books = [
-            { title: "How to Learn JavaScript - Vol 1", info: "Study hard" }
-            , { title: "How to Learn ES6", info: "Complete all exercises :-)" }
-            , {
-                title: "How to Learn React",
-                info: "Complete all your CA's",moreInfo: ""
-            }
-            , {
-                title: "How to become a specialist in Computer Science - Vol 4",
-                info: "Don't drink beers, until Friday (after four)",
-                moreInfo: "5 Points = 5 beers ;-)"
-            }
-        ]
-console.log( this.getData());
+        this.getData()
        // console.log(this.messageFromServer);
 
-
+      console.log( this.getBookByID(2));
     }
 
 
@@ -41,6 +30,11 @@ console.log( this.getData());
         return this.Books.slice();
 
     }
+    getBookByID(boID){//returns a book by given id
+    this.fetchBookByID(boID);
+        return this.BookByID;
+    }
+
 
 
     @action
@@ -58,6 +52,11 @@ console.log( this.getData());
 
     }
 
+    @action
+    setBookByID(boID){
+        this.BookByID = boID;
+    }
+
 
 
     @action
@@ -68,7 +67,8 @@ console.log( this.getData());
         this.messageFromServer = "";
         let errorCode = 200;
         const options = fetchHelper.makeOptions("GET", false);
-        fetch(URL + "api/books", options)
+
+      fetch(URL + "api/books", options)
             .then((res) => {
                 if (res.status > 200 || !res.ok) {
                     errorCode = res.status;
@@ -82,10 +82,10 @@ console.log( this.getData());
                     throw new Error(`${res.error.message} (${res.error.code})`);
                 }
                 else {
-
+                    console.log("l82");
 
                     this.setBooks(res);
-                    console.log(this.books);
+                    //console.log(this.books);
 
                     //console.log(res.length);
                     this.setMessageFromServer(res.message);
@@ -97,8 +97,57 @@ console.log( this.getData());
         console.log( this.errorMessage );
         console.log(URL);
             })
+
+
+  //setTimeout(this.getData,120000);
+
     }
 
+    fetchBookByID = (id) => {
+
+        this.errorMessage = "";
+        this.messageFromServer = "";
+        let errorCode = 200;
+        const options = fetchHelper.makeOptions("GET", false);
+
+
+        return fetch(URL + "api/books/"+id, options)
+            .then((res) => {
+                if (res.status > 200 || !res.ok) {
+                    errorCode = res.status;
+                    console.log("error");
+                }
+                return res.json();
+            })
+            .then((res) => {
+                console.log("l 71");
+                if (errorCode !== 200) {
+                    throw new Error(`${res.error.message} (${res.error.code})`);
+                }
+                else {
+
+                    //console.log(res);
+
+                    //container = res;
+                   this.setBookByID(res);
+                   console.log(res);
+
+                    //console.log(res.length);
+                    this.setMessageFromServer(res.message);
+                }
+            }).catch(err => {
+            //This is the only way (I have found) to veryfy server is not running
+            this.setErrorMessage(fetchHelper.addJustErrorMessage(err));
+            console.log("exception");
+            console.log( this.errorMessage );
+            console.log(URL);
+        })
+       // console.log("result");
+        //console.log(result);
+        //return result;
+       // setTimeout(this.getData,120000);
+
+    }
 
 }
 export default new BookStore();
