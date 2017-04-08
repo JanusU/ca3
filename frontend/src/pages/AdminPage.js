@@ -19,6 +19,9 @@ const AdminPage = observer(
         <div>
           <h2>Here you can see a list of all the users</h2>
             <a>{adminStore.getData()}</a>
+
+            /*mangler metode*/
+            <button>Add a new User</button>
         </div>
       )
     }
