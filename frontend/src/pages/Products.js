@@ -7,7 +7,7 @@ import {observer} from "mobx-react"
        var books = bookStore.books;
 
        const booktable = books.map((book) => {
-           return <tr>
+           return <tr key={book.id}>
                <td>{book.title}</td>
                <td>{book.info}</td>
                <td>{book.moreInfo}</td>
@@ -28,6 +28,8 @@ import {observer} from "mobx-react"
                 <tbody>
                 {booktable}
                 </tbody>
+
+
             </div>
         )
     }
