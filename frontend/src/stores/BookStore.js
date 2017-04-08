@@ -54,8 +54,11 @@ console.log( this.getData());
     @action
     setBooks(bo){
         this.Books = bo;
+    }
 
-
+    @action
+    deleteBook(id){
+        this.books.splice(id);
     }
 
 

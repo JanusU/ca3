@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {observer} from "mobx-react";
 import userData from "../stores/adminStore";
+import fetcher from "../stores/fetchHelpers";
 
 const AdminPage = observer(
   class AdminPage extends Component {
@@ -16,12 +17,8 @@ const AdminPage = observer(
     render() {
       return (
         <div>
-          <h2>Admins</h2>
-          <p>This message is fetched from the server if you were properly logged in</p>
-          <div className="msgFromServer">
-          {userData.messageFromServer}
-          </div>
-          <h4 style={{color: "red"}}>{userData.errorMessage}</h4>
+          <h2>Here you can see a list of all the users</h2>
+            <a></a>
         </div>
       )
     }
