@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {observer} from "mobx-react";
 import userData from "../stores/adminStore";
-import fetcher from "../stores/fetchHelpers";
+import adminStore from "../stores/adminStore";
 
 const AdminPage = observer(
   class AdminPage extends Component {
@@ -18,7 +18,7 @@ const AdminPage = observer(
       return (
         <div>
           <h2>Here you can see a list of all the users</h2>
-            <a></a>
+            <a>{adminStore.getData()}</a>
         </div>
       )
     }
