@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { observer } from "mobx-react";
 import userData from "../stores/userStore";
-import bookStore from "../stores/bookStore";
+import bookStore from "../stores/BookStore";
 
 const UserPage = observer(
   class UserPage extends Component {
