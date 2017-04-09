@@ -196,7 +196,6 @@ class BookStore {
                     throw new Error(`${res.error.message} (${res.error.code})`);
                 }
                 else {
-
                     console.log(res);
                 this.setMessageFromServer(res.message);
                 }
@@ -208,6 +207,7 @@ class BookStore {
                 console.log(URL);
             })
 
+        alert(bookJason.title+" was succesully added!")
     }
 
 
