@@ -76,7 +76,7 @@ super();
         <div>
           <h2>Users</h2>
 
-
+<h5>Add new book</h5>
                 <label>
                     Title:
                     <input type="text" id="title" onChange={ this.handleTitle }/>

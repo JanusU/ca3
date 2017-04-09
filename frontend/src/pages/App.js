@@ -18,8 +18,7 @@ const App = observer(class App extends Component {
             </div>
             <ul className="nav navbar-nav">
               <li><Link to="/documentation">Documentation</Link></li>
-              <li><Link to="/products">Products</Link></li>
-              <li><Link to="/company">Company</Link></li>
+              <li><Link to="/products">Books</Link></li>
                   {auth.isUser ?(
                           <li><Link to="/user">Add/Edit Books </Link></li>
                       ):( null

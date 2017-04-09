@@ -11,6 +11,10 @@ export default class Documentation extends Component{
             <p> Vi har formået at lave et rest api der kan hente, tilføje og slette en bog samt opdatere en allerede eksisterende bogs information
             </p>
             <p> Desuden har vi lavet de tilhørede funktioner til alle CRUD operationer i frontend delen(se BookStore.js)</p>
+            <p>Derudover nået vi at implementere UI, så man kan se en liste af gemte bøger samt mulighed for at tilføje en ny bog, som så bliver gemt i databasen.
+                Dog lykkedes det os ikke, på grund af tidsfristen, at implementere UI så man kan slette eller redigere en bog.(Metoderne er lavet i BookStore,js) </p>
+
+
         </div>
 
         )

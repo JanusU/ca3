@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import bookStore from "../stores/BookStore";
 import {observer} from "mobx-react"
+import "./css/booksTable.css";
 
 @observer export default class Documentation extends Component{
     render() {
@@ -17,18 +18,25 @@ import {observer} from "mobx-react"
        );
 
 
+
         return(
             <div>
                 <h1>The Books</h1>
-                <tr>
+                <table>
+
+                    <thead>
+                    <tr>
                     <th>BookTitle</th>
                     <th>Info</th>
                     <th>MoreInfo</th>
-                </tr>
+                    </tr>
+                    </thead>
+
                 <tbody>
                 {booktable}
                 </tbody>
 
+                </table>
 
             </div>
         )
